@@ -17,12 +17,12 @@ export default function Layout({ children, currentPageName }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <nav className="bg-slate-900 border-b border-amber-700/30 sticky top-0 z-50">
+    <div className="min-h-screen parchment-bg">
+      <nav className="bg-amber-900/90 backdrop-blur border-b-2 border-amber-950 sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <Link to={createPageUrl('Home')} className="text-2xl font-serif text-amber-100 flex items-center gap-2">
-              ✨ Book of Shadows
+            <Link to={createPageUrl('TableOfContents')} className="text-2xl book-title text-amber-50 flex items-center gap-2">
+              📖 Book of Shadows
             </Link>
 
             <button 
@@ -33,20 +33,20 @@ export default function Layout({ children, currentPageName }) {
             </button>
 
             <div className="hidden md:flex items-center gap-6">
-              <Link to={createPageUrl('MyGrimoire')} className="text-amber-100 hover:text-amber-300">
-                My Grimoire
+              <Link to={createPageUrl('TableOfContents')} className="handwritten text-amber-50 hover:text-amber-200">
+                Contents
               </Link>
-              <Link to={createPageUrl('TheAunty')} className="text-amber-100 hover:text-amber-300">
-                The Aunty
+              <Link to={createPageUrl('MyGrimoire')} className="handwritten text-amber-50 hover:text-amber-200">
+                Grimoire
               </Link>
-              <Link to={createPageUrl('MoonTracker')} className="text-amber-100 hover:text-amber-300">
-                Moon
+              <Link to={createPageUrl('TheAunty')} className="handwritten text-amber-50 hover:text-amber-200">
+                Aunty
               </Link>
-              <Link to={createPageUrl('Covens')} className="text-amber-100 hover:text-amber-300">
-                Covens
+              <Link to={createPageUrl('Spells')} className="handwritten text-amber-50 hover:text-amber-200">
+                Spells
               </Link>
               {user && (
-                <button onClick={handleLogout} className="text-amber-100 hover:text-amber-300 flex items-center gap-2">
+                <button onClick={handleLogout} className="handwritten text-amber-50 hover:text-amber-200 flex items-center gap-2">
                   <LogOut className="w-4 h-4" />
                   Logout
                 </button>
@@ -80,9 +80,9 @@ export default function Layout({ children, currentPageName }) {
 
       <main>{children}</main>
 
-      <footer className="bg-slate-900 text-amber-100 py-8 mt-16">
+      <footer className="bg-amber-900/90 text-amber-100 py-8 mt-16 border-t-2 border-amber-950">
         <div className="container mx-auto px-4 text-center">
-          <p>✨ Blessed be ✨</p>
+          <p className="fancy-script text-2xl">✨ Blessed be ✨</p>
         </div>
       </footer>
     </div>

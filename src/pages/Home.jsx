@@ -12,14 +12,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen parchment-bg aged-paper">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-serif text-amber-100 mb-4">
-            ✨ Book of Shadows ✨
+          <h1 className="text-7xl book-title text-amber-950 mb-4">
+            📖 Book of Shadows
           </h1>
-          <p className="text-xl text-purple-200">
-            Your Digital Grimoire & Magical Practice Companion
+          <p className="fancy-script text-3xl text-amber-800">
+            A Witch's Grimoire
           </p>
         </div>
 
